@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Teras JTI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Teras JTI</h1>
+        <a class="lonceng" href="#" aria-label="Notifikasi">
+            <svg class="ikon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg>
+        </a>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="sr-only">Cari Tempat</h2>
+            <form class="cari">
+                <svg class="ikon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+                <label for="cari" class="sr-only">Cari tempat atau ruangan</label>
+                <input type="search" id="cari" placeholder="Cari tempat atau ruangan">
+            </form>
+        </section>
+
+        <section class="chips">
+            <h2 class="sr-only">Filter</h2>
+            <ul>
+                <li><a href="dashboard.html" class="aktif">Semua</a></li>
+                <li><a href="dashboard.html">Gratis</a></li>
+                <li><a href="dashboard.html">Berbayar (DP)</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Tempat Tersedia</h2>
+
+            <article>
+                <figure>
+                    <svg class="ikon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                    <figcaption><img src="assets/images/jpg24.jpeg" alt="Foto Ruang Diskusi"></figcaption>
+                </figure>
+                <div class="isi">
+                    <div class="judul">
+                        <h3>Ruang Diskusi</h3>
+                        <span class="badge gratis"><svg class="ikon sedang" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg> GRATIS</span>
+                    </div>
+                    <p class="kapasitas"><svg class="ikon kecil" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.5 3-5.5 7-5.5s7 2 7 5.5"/><path d="M16 4.5a3.5 3.5 0 010 7"/><path d="M18 14.7c2.4.6 4 2.2 4 5.3"/></svg> Kapasitas 6 orang</p>
+                    <a class="tombol" href="jadwal.html">Lihat Jadwal</a>
+                </div>
+            </article>
+
+            <article>
+                <figure>
+                    <svg class="ikon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                    <figcaption><img src="assets/images/jpg25.jpeg" alt="Foto Aula Mini"></figcaption>
+                </figure>
+                <div class="isi">
+                    <div class="judul">
+                        <h3>Aula Mini</h3>
+                        <span class="badge dp">DP Rp 50.000</span>
+                    </div>
+                    <p class="kapasitas"><svg class="ikon kecil" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.5 3-5.5 7-5.5s7 2 7 5.5"/><path d="M16 4.5a3.5 3.5 0 010 7"/><path d="M18 14.7c2.4.6 4 2.2 4 5.3"/></svg> Kapasitas 6 orang</p>
+                    <a class="tombol" href="jadwal.html">Lihat Jadwal</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <nav>
+        <ul>
+            <li><a href="dashboard.html" class="aktif">
+                <svg class="ikon" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+                Beranda</a></li>
+            <li><a href="riwayat.html">
+                <svg class="ikon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                Riwayat</a></li>
+            <li><a href="profil.html">
+                <svg class="ikon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+                Profil</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

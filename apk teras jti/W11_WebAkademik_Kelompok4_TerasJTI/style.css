@@ -1,0 +1,158 @@
+/* Teras JTI - gaya mengikuti Figma (Design System & 02 - Beranda) */
+:root {
+    --primary: #1d4ed8;
+    --primary-light: #dbeafe;
+    --primary-dark: #1e3a8a;
+    --bg-screen: #f8fafc;
+    --bg-card: #ffffff;
+    --border: #d1d5db;
+    --border-input: #9ca3af;
+    --text: #111827;
+    --text-2: #4b5563;
+    --text-3: #6b7280;
+    --success: #15803d;
+    --success-bg: #f0fdf4;
+    --warning: #92400e;
+    --warning-bg: #fef3c7;
+}
+
+* { box-sizing: border-box; }
+
+html { background: #e5e7eb; }
+
+body {
+    margin: 0 auto;
+    max-width: 390px;
+    min-height: 100vh;
+    background: var(--bg-screen);
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--text);
+    padding-bottom: 72px;
+    box-shadow: 0 0 24px rgba(0, 0, 0, .08);
+}
+
+svg.ikon { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+svg.kecil { width: 16px; height: 16px; }
+svg.sedang { width: 14px; height: 14px; }
+
+/* ===== Header ===== */
+body > header {
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    height: 56px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+body > header h1 { flex: 1; margin: 0; font-size: 24px; font-weight: 700; }
+.lonceng {
+    width: 44px; height: 44px; display: flex;
+    align-items: center; justify-content: center; color: var(--text);
+}
+
+main { padding: 16px; display: flex; flex-direction: column; gap: 16px; }
+main > section { display: flex; flex-direction: column; gap: 16px; }
+h2 { margin: 0; font-size: 16px; font-weight: 600; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+/* ===== Form ===== */
+label { display: block; margin-bottom: 6px; font-weight: 500; }
+input {
+    width: 100%; height: 48px; padding: 0 12px;
+    font: inherit; color: var(--text);
+    background: var(--bg-card);
+    border: 1px solid var(--border-input); border-radius: 8px;
+}
+input::placeholder { color: var(--text-3); }
+input:focus { outline: 2px solid var(--primary); border-color: var(--primary); }
+button, .tombol {
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; height: 48px; padding: 0 16px;
+    border: 0; border-radius: 8px;
+    background: var(--primary); color: #fff;
+    font: inherit; font-weight: 600; text-decoration: none; cursor: pointer;
+}
+
+/* ===== Search ===== */
+.cari { position: relative; }
+.cari svg { position: absolute; left: 12px; top: 14px; width: 20px; height: 20px; color: var(--text-2); }
+.cari input { padding-left: 40px; }
+
+/* ===== Chip ===== */
+.chips ul { display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.chips a {
+    display: block; padding: 8px 16px;
+    border: 1px solid var(--border-input); border-radius: 999px;
+    background: var(--bg-card); color: var(--text-2);
+    font-weight: 500; text-decoration: none;
+}
+.chips a.aktif { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+/* ===== Kartu tempat ===== */
+article {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden;
+}
+figure {
+    margin: 0; height: 140px; background: var(--primary-light);
+    display: flex; flex-direction: column; gap: 4px;
+    align-items: center; justify-content: center; color: var(--primary);
+}
+figure svg { width: 32px; height: 32px; }
+figcaption { font-size: 12px; color: var(--primary-dark); }
+.isi { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.judul { display: flex; align-items: center; gap: 8px; }
+.judul h3 { flex: 1; margin: 0; font-size: 16px; font-weight: 600; }
+.kapasitas { margin: 0; display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-2); }
+
+.badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 12px; padding: 4px 8px; border-radius: 6px; border: 1px solid;
+}
+.badge.gratis { background: var(--success-bg); color: var(--success); border-color: var(--success); }
+.badge.dp { background: var(--warning-bg); color: var(--warning); border-color: var(--warning); }
+
+/* ===== Navigasi bawah ===== */
+body > nav {
+    position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 390px; height: 72px;
+    background: var(--bg-card); border-top: 1px solid var(--border);
+}
+body > nav ul { display: flex; gap: 8px; list-style: none; margin: 0; padding: 8px 16px; height: 100%; }
+body > nav li { flex: 1; }
+body > nav a {
+    height: 100%; display: flex; flex-direction: column; gap: 2px;
+    align-items: center; justify-content: center;
+    font-size: 12px; color: var(--text-2); text-decoration: none;
+}
+body > nav a.aktif { color: var(--primary); }
+
+body > footer { text-align: center; font-size: 12px; color: var(--text-2); padding: 8px 16px 24px; }
+
+/* ===== Halaman Login ===== */
+body.login { padding-bottom: 0; display: flex; flex-direction: column; }
+body.login > header {
+    display: block; height: auto; background: none; border: 0;
+    text-align: center; padding: 96px 24px 0;
+}
+body.login > header h1 { font-size: 24px; margin: 16px 0 8px; }
+body.login > header p { margin: 0; color: var(--text-2); }
+body.login > header .logo {
+    width: 72px; height: 72px; margin: 0 auto;
+    background: var(--primary); color: #fff; border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; font-weight: 700;
+}
+body.login main { padding: 32px 24px 0; flex: 1; }
+body.login h2 { text-align: center; }
+body.login main > section > p { margin: 0; text-align: center; color: var(--text-2); }
+body.login form { display: flex; flex-direction: column; gap: 16px; }
+body.login form p { margin: 0; }
+body.login a { color: var(--primary); font-weight: 600; text-decoration: none; }
+
+/* ===== Halaman kerangka ===== */
+.kosong { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.kosong p { margin: 8px 0 0; color: var(--text-2); }
